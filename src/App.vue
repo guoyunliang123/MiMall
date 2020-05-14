@@ -7,33 +7,34 @@
 <script>
 // import axios from 'axios'
 // import jsonp from 'jsonp'
+import storage from "./storage";
 
 export default {
-  name: 'App',
-  components: {
-  },
+  name: "App",
+  components: {},
   data() {
-    return {
-      
-    }
-  }, 
+    return {};
+  },
   mounted() {
     // cors + jsonp
     // let url = "https://www.imooc.com/activity/servicetime";
     // 代理
     // let url = "/activity/servicetime";
     // let url = "/api/activity/servicetime";
-
     // axios.get(url).then(() => {
-
     // });
-
     // jsonp(url, (err, res) => {
     //   let result = res;
     //   this.data = result;
     // })
+
+    // storage.setItem("a", 1);
+    // storage.setItem("user", { a: 1 });
+    // storage.setItem("abc", { a: 1 }, "user");
+    // storage.clear("a");
+    storage.clear("a", "user");
   }
-}
+};
 </script>
 
 <style>
