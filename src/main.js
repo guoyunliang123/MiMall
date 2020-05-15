@@ -10,7 +10,7 @@ axios.defaults.baseURL = '/api';
 // 超时时间  8 秒
 axios.defaults.timeout = 8000;
 // 接口错误拦截
-axios.interceptors.response.user(function(response) {
+axios.interceptors.response.use(function(response) {
   // status = 1 正常   = 10 未登录
   let res = response.data;
   if(res.status == 0) {
