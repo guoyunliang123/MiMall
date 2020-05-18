@@ -2,6 +2,7 @@ import Vue from 'vue'
 import router from './router'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
+import env from './env'
 
 import App from './App.vue'
 
@@ -9,6 +10,8 @@ import App from './App.vue'
 axios.defaults.baseURL = '/api';
 // 超时时间  8 秒
 axios.defaults.timeout = 8000;
+// 根据环境变量获取不同请求的地址
+axios.defaults.baseURL = env.baseURL
 // 接口错误拦截
 axios.interceptors.response.use(function(response) {
   // status = 1 正常   = 10 未登录
