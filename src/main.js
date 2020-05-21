@@ -19,7 +19,7 @@ if(mock) {
 // 根据前端的跨域方式进行调整
 // axios.defaults.baseURL = '/api';
 // 通过 easy-mock 平台实现数据 mock   将 api 换成 easy-mock 平台的 url 
-// axios.defaults.baseURL = '/api';
+// axios.defaults.baseURL = '/ https://www.easy-mock.com/mock/5ec5edca8dbfc703f53a7794/mimall';
 // 超时时间  8 秒
 axios.defaults.timeout = 8000;
 // 根据环境变量获取不同请求的地址

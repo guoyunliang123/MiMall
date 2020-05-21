@@ -15,7 +15,7 @@ export default {
   components: {},
   data() {
     return {
-      res: {}
+      // res: {}
     };
   },
   mounted() {
@@ -48,20 +48,13 @@ export default {
     // });
     
     // 本地集成 mockjs 实现数据 mock  先下载 mockjs  npm i mockjs --save-dev
-    this.axios.get('/user/login').then((res) => {
-      this.res = res;
-    });
+    // this.axios.get('/user/login').then((res) => {
+    //   this.res = res;
+    // });
   }
 };
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import './assets/scss/reset.scss'
 </style>
