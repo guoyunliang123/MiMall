@@ -2,6 +2,43 @@
   <div class="index">
     <div class="container">
       <div class="swiper-box">
+        <div class="nav-menu">
+          <ul class="menu-wrap">
+            <li class="menu-item">
+              <a href="javascript:;">手机 电话卡</a>
+              <div class="children"></div>
+            </li>
+            <li class="menu-item">
+              <a href="javascript:;">电视 盒子</a>
+              <div class="children"></div>
+            </li>
+            <li class="menu-item">
+              <a href="javascript:;">笔记本 平板</a>
+              <div class="children"></div>
+            </li>
+            <li class="menu-item">
+              <a href="javascript:;">家电 插线板</a>
+              <div class="children"></div>
+            </li>
+            <li class="menu-item">
+              <a href="javascript:;">出行 穿戴</a>
+              <div class="children"></div>
+            </li>
+            <li class="menu-item">
+              <a href="javascript:;">智能 路由器</a>
+              <div class="children"></div>
+            </li>
+            <li class="menu-item">
+              <a href="javascript:;">电源 配件</a>
+              <div class="children"></div>
+            </li>
+            <li class="menu-item">
+              <a href="javascript:;">生活 箱包</a>
+              <div class="children"></div>
+            </li>
+          </ul>
+
+        </div>
         <swiper v-bind:options="swiperOptions">
           <swiper-slide v-for="(item, index) in slideList" :key="index">
             <a v-bind:href="'/#/product/' + item.id"><img v-bind:src="item.img" alt=""></a>
@@ -86,11 +123,47 @@ import 'swiper/css/swiper.css'
 </script>
 
 <style lang="scss">
+  @import './../assets/scss/mixin.scss';
   .index {
     .swiper-box {
       width: 1226px;
+      .nav-menu{
+        position: absolute;
+        width: 264px;
+        height: 451px;
+        z-index: 9;
+        padding: 26px 0;
+        background-color: #55585A7A;
+        box-sizing: border-box;
+        .menu-wrap {
+          .menu-item {
+            height: 50px;
+            line-height: 50px;
+            a {
+              position: relative;
+              font-size: 16px;
+              color: #ffffff;
+              padding-left: 30px;
+              display: block;
+              &:after {
+                content: ' ';
+                @include bgImg(10px, 15px, '/imgs/icon-arrow.png');
+                position: absolute;
+                top: 17.5px;
+                right: 30px;
+              }
+            }
+            &:hover {
+              background-color: #FF6600;
+            }
+          }
+        }
+      }
       .swiper-container {
         height: 451px;
+        .swiper-button-prev {
+          left: 274px;
+        }
         img {
           width: 100%;
           height: 100%;
