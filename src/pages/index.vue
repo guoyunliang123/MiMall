@@ -6,35 +6,37 @@
           <ul class="menu-wrap">
             <li class="menu-item">
               <a href="javascript:;">手机 电话卡</a>
-              <div class="children"></div>
+              <div class="children">
+                <ul v-for="(item, i) in menuList" :key='i'>
+                  <li v-for="(sub, j) in item" :key="j">
+                    <a v-bind:href="sub?'/#/product/' + sub.id : ''">
+                      <img v-bind:src="sub? sub.img : '/imgs/item-box-1.png'" alt="">
+                      {{sub? sub.name : '小米9'}}
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li class="menu-item">
               <a href="javascript:;">电视 盒子</a>
-              <div class="children"></div>
             </li>
             <li class="menu-item">
               <a href="javascript:;">笔记本 平板</a>
-              <div class="children"></div>
             </li>
             <li class="menu-item">
               <a href="javascript:;">家电 插线板</a>
-              <div class="children"></div>
             </li>
             <li class="menu-item">
               <a href="javascript:;">出行 穿戴</a>
-              <div class="children"></div>
             </li>
             <li class="menu-item">
               <a href="javascript:;">智能 路由器</a>
-              <div class="children"></div>
             </li>
             <li class="menu-item">
               <a href="javascript:;">电源 配件</a>
-              <div class="children"></div>
             </li>
             <li class="menu-item">
               <a href="javascript:;">生活 箱包</a>
-              <div class="children"></div>
             </li>
           </ul>
 
@@ -116,6 +118,28 @@ import 'swiper/css/swiper.css'
             id: '',
             img: '/imgs/slider/slide-1.jpg'
           }
+        ],
+        menuList: [
+          [
+            {
+              id: '30',
+              img: 'imgs/item-box-1.png',
+              name: '小米 CC9'
+            },{
+              id: '31',
+              img: 'imgs/item-box-2.png',
+              name: '小米8青春版'
+            },{
+              id: '32',
+              img: 'imgs/item-box-3.jpg',
+              name: 'Redmi K20 Pro'
+            },{
+              id: '33',
+              img: 'imgs/item-box-4.jpg',
+              name: '移动 4G+ 专区'
+            },
+          ], 
+          [0,0,0,0], [0,0,0,0], [0,0,0,0], [0,0,0,0], [0,0,0,0],
         ]
       }
     }
@@ -155,6 +179,40 @@ import 'swiper/css/swiper.css'
             }
             &:hover {
               background-color: #FF6600;
+              .children {
+                display: block;
+              }
+            }
+            .children {
+              display: none;
+              width: 962px;
+              height: 451px;
+              background-color: #ffffff;
+              position: absolute;
+              top: 0;
+              left: 264px;
+              border: 1px solid #E5E5E5;
+              ul {
+                display: flex;
+                justify-content: space-between;
+                height: 75px;
+                li {
+                  height: 75px;
+                  line-height: 75px;
+                  flex: 1;
+                  padding-left: 23px;
+                }
+                a {
+                  color: #333333;
+                  font-size: 14px;
+                }
+                img {
+                  width: 42px;
+                  height: 35px;
+                  vertical-align: middle;
+                  margin: 15px;
+                }
+              }
             }
           }
         }
