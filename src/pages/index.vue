@@ -63,7 +63,6 @@
       </div>
       <div class="product-box"></div>
     </div>
-    
     <service-bar></service-bar>
   </div>
 </template>
