@@ -21,7 +21,7 @@
     "@vue/cli-plugin-router": "^4.3.1",
     "@vue/cli-plugin-vuex": "^4.3.1",
     "@vue/cli-service": "~4.3.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "babel-eslint": "^10.1.0",
     "element-ui": "^2.13.1",
     "eslint": "^6.7.2",
